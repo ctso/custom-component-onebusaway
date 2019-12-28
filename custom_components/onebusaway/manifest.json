@@ -1,0 +1,11 @@
+{
+  "domain": "onebusaway",
+  "name": "OneBusAway",
+  "documentation": "https://github.com/ctso/custom-component-blueprint",
+  "dependencies": [],
+  "codeowners": [
+    "@ctso"
+  ],
+  "requirements": [],
+  "homeassistant": "0.96.0"
+}

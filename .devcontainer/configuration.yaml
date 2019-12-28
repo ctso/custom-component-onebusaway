@@ -2,19 +2,11 @@ default_config:
 logger:
   default: error
   logs:
-    custom_components.blueprint: debug
+    custom_components.onebusaway: debug
 
-
-
-blueprint:
-  username: my_username
-  password: my_password
-  binary_sensor:
-    - enabled: true
-      name: My custom name
-  sensor:
-    - enabled: true
-      name: My custom name
-  switch:
-    - enabled: true
-      name: My custom name
+sensor:
+  - platform: onebusaway
+    api_key: TEST
+    name: onebusaway_admiral_59th_50
+    stop: "1_14970"
+    route: "1_100230"
