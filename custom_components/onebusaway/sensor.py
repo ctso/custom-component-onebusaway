@@ -87,6 +87,10 @@ class OneBusAwaySensor(Entity):
         departures = response["data"]["entry"]["arrivalsAndDepartures"]
 
         for departure in departures:
+            # Filter down to the configured route
+            if departure["routeId"] != self._route:
+                continue
+
             # Ignore departures that passengers cannot use (maybe the bus is going back to the terminal)
             if not departure["departureEnabled"]:
                 continue
